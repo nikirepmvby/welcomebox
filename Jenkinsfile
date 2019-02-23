@@ -2,11 +2,9 @@ pipeline {
   agent any
 
   stages {
-    stage('Deploy1') {
+    stage('Deploy') {
       when {
-        anyOf {
-          branch 'master'
-        }
+        branch 'master'
       }
       steps {
         sh "docker ps"
