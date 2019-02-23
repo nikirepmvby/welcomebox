@@ -3,7 +3,9 @@ pipeline {
 
   stages {
     stage('Deploy') {
-      when branch 'master'
+      when {
+        branch 'master'
+      }
       steps {
         sh "docker ps"
       }
