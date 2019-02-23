@@ -34,7 +34,7 @@ pipeline {
             .
         """
         script {
-          docker.withRegistry('', 'DockerHub-Credentials') {
+          docker.withRegistry('https://index.docker.io/v1/', 'DockerHub-Credentials') {
             sh "docker push ${repo}"
           }
         }
