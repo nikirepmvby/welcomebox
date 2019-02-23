@@ -30,7 +30,7 @@ pipeline {
             --label lastingdynamics.project=welcomebox \
             --label lastingdynamics.branch=${branch_lower} \
             --label lastingdynamics.commit=${GIT_COMMIT} \
-            -t welcomebox \
+            -t ${repo}:${branch_lower} \
             .
         """
         sh "docker push ${repo}"
