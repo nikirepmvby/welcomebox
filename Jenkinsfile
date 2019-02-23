@@ -33,8 +33,10 @@ pipeline {
             -t ${repo}:${branch_lower} \
             .
         """
-        docker.withRegistry('', 'DockerHub-Credentials') {
-          sh "docker push ${repo}"
+        script {
+          docker.withRegistry('', 'DockerHub-Credentials') {
+            sh "docker push ${repo}"
+          }
         }
       }
     }
