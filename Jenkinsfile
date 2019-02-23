@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh """
           docker build \
-            -f docker/Dockerfile
+            -f docker/Dockerfile \
             --build-arg "BUILD_TIME=${timestamp}" \
             --build-arg "GIT_COMMIT=${GIT_COMMIT}" \
             --label lastingdynamics.project=welcomebox \
