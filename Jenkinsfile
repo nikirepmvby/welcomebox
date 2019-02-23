@@ -8,6 +8,8 @@ pipeline {
       }
       steps {
         sh "docker ps"
+        sh "ls"
+        sh "pwd"
       }
     }
   }
